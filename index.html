@@ -33,7 +33,14 @@
       text-align: center;
       padding: 0 20px;
     }
-    .hero h2 { font-size: 3em; margin-bottom: 20px; }
+    .hero h2 { font-size: 3em; margin-bottom: 10px; }
+    .hero h3 {
+      font-weight: normal;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      color: #ffcc00; /* golden color for motto */
+      font-style: italic;
+    }
     .hero p { font-size: 1.2em; margin-bottom: 30px; max-width: 700px; }
     .hero a.button {
       background-color: #ff9900;
@@ -58,8 +65,21 @@
     .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
     .card { border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: #f9f9f9; transition: transform 0.3s, box-shadow 0.3s; }
     .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
-
     ul { margin-left: 20px; list-style-type: disc; margin-bottom: 15px; }
+
+    /* Target Industries */
+    .industries { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
+    .industry { background-color: #f0f8ff; border-radius: 10px; padding: 20px; flex: 1 1 200px; text-align: center; }
+    .industry i { font-size: 2em; color: #003366; margin-bottom: 10px; display: block; }
+
+    /* Business Model */
+    .model { background-color: #f9f9f9; border-left: 5px solid #003366; padding: 20px; margin-top: 20px; }
+
+    /* Growth Roadmap */
+    .roadmap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    table th, table td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    table th { background-color: #003366; color: white; }
 
     /* Contact */
     .contact p, .contact a { margin-bottom: 10px; }
@@ -72,7 +92,9 @@
       header h1{font-size:1.5em;}
       nav a{padding:6px 10px;}
       .hero h2{font-size:2em;}
+      .hero h3{font-size:1.2em;}
       .hero p{font-size:1em;}
+      .industries { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
@@ -83,8 +105,10 @@
   <nav>
     <a href="#about">About Us</a>
     <a href="#offerings">Our Offerings</a>
+    <a href="#industries">Target Industries</a>
+    <a href="#model">Business Model</a>
+    <a href="#roadmap">Growth Roadmap</a>
     <a href="#why">Why Aurevion Tech?</a>
-    <a href="#products">Our Product Range</a>
     <a href="#contact">Contact Us</a>
   </nav>
 </header>
@@ -92,55 +116,113 @@
 <!-- Hero Banner -->
 <section class="hero">
   <h2>Innovating Industrial Automation</h2>
+  <h3>Engineering Motion. Powering Innovations</h3>
   <p>Delivering tailored solutions in Factory Automation, Power Transmission, IoT Integration, and Engineering Services to boost efficiency, productivity, and sustainability.</p>
   <a href="#contact" class="button">Get in Touch</a>
 </section>
 
+<!-- About / Company Overview -->
 <section id="about">
   <h2>About Us</h2>
-  <p>It is with great excitement and pride that we introduce Aurevion Tech, a trailblazer in Industrial Automation and Power Transmission Solutions.</p>
-  <p>We specialize in Factory & Process Automation Products, Turnkey Projects, Customized Control Panels, IoT Solutions, and Engineering Services.</p>
-  <p>Our mission is to deliver innovation, reliability, and tailored solutions that empower industries to achieve higher efficiency, productivity, and sustainability.</p>
+  <p><strong>Name:</strong> Aurevion Tech</p>
+  <p><strong>Founded:</strong> 2025 | <strong>Location:</strong> Salem, Tamil Nadu, India</p>
+  <p><strong>Nature of Business:</strong> Engineering Solutions, Service & Trading</p>
+  <p><strong>Business Type:</strong> Private Start-up (Industrial Automation & Power Transmission)</p>
+  <p><strong>Core Objective:</strong> To provide high-quality services and trading solutions in industrial power transmission, automation systems, motors, and allied engineering products.</p>
 </section>
 
+<!-- Key Offerings -->
 <section id="offerings">
   <h2>Our Offerings</h2>
   <div class="cards">
     <div class="card">
       <h3><i class="fas fa-cogs"></i> Engineering Services</h3>
       <ul>
-        <li>Electrical & Mechanical Engineering</li>
-        <li>IoT Integration & Smart Factory Solutions</li>
-        <li>Turnkey Automation & Technical Consulting</li>
+        <li>Turnkey Automation Projects</li>
+        <li>Electrical & Mechanical Design Consulting</li>
+        <li>Maintenance & Reliability Engineering</li>
       </ul>
     </div>
     <div class="card">
-      <h3><i class="fas fa-robot"></i> Industrial Automation Solutions</h3>
+      <h3><i class="fas fa-robot"></i> Industrial Automation Products</h3>
       <ul>
-        <li>PLCs, HMIs, SCADA Systems</li>
-        <li>Variable Frequency Drives (VFDs), Servo Drives & Encoders</li>
-        <li>Robotics, Sensors & Motion Control</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3><i class="fas fa-tools"></i> Customized Control Panels</h3>
-      <ul>
-        <li>Process Control Panels</li>
-        <li>Motor Control Centers (MCC)</li>
-        <li>IoT-Enabled Panels</li>
+        <li>PLC, HMI, SCADA solutions</li>
+        <li>Servo & VFD Drives, Motion Control Systems</li>
+        <li>Robotics and IoT Integration</li>
+        <li>Smart Factory Solutions</li>
       </ul>
     </div>
     <div class="card">
       <h3><i class="fas fa-industry"></i> Power Transmission Products</h3>
       <ul>
-        <li>Gearboxes & Servo Gearboxes</li>
-        <li>Geared Motors & AC Motors</li>
-        <li>Couplings, Bearings & LM Guides</li>
+        <li>Gearboxes, Geared Motors, Couplings, Bearings</li>
+        <li>Authorized Partner: STM Gear Drives & MaxDrive & Synegy motors</li>
+        <li>Precision Powertrain Components</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3><i class="fas fa-tools"></i> Control Panels (Future)</h3>
+      <ul>
+        <li>MCC, PCC, and Process Panels</li>
+        <li>IoT-enabled Smart Panels</li>
+        <li>Custom Design for OEMs and Industries</li>
       </ul>
     </div>
   </div>
 </section>
 
+<!-- Target Industries -->
+<section id="industries">
+  <h2>Target Industries</h2>
+  <div class="industries">
+    <div class="industry"><i class="fas fa-industry"></i> Manufacturing & Processing</div>
+    <div class="industry"><i class="fas fa-building"></i> Infrastructure & Utilities</div>
+    <div class="industry"><i class="fas fa-bolt"></i> Energy & Power Systems</div>
+  </div>
+</section>
+
+<!-- Business Model -->
+<section id="model">
+  <h2>Business Model</h2>
+  <div class="model">
+    Aurevion Tech follows a <strong>Service + Trading Hybrid Model</strong>, generating revenue through product sales, project execution, and service contracts. We focus on <strong>B2B industrial clients</strong>.
+  </div>
+</section>
+
+<!-- Growth Roadmap -->
+<section id="roadmap">
+  <h2>Growth Roadmap</h2>
+  <div class="roadmap">
+    <table>
+      <thead>
+        <tr>
+          <th>Phase</th>
+          <th>Period</th>
+          <th>Focus</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Phase 1 – Foundation</td>
+          <td>2025</td>
+          <td>Vendor registration, digital branding</td>
+        </tr>
+        <tr>
+          <td>Phase 2 – Growth</td>
+          <td>2026</td>
+          <td>Customer network expansion, IoT panels</td>
+        </tr>
+        <tr>
+          <td>Phase 3 – Diversification</td>
+          <td>2027–28</td>
+          <td>Innovation Lab, exports, AI-based automation</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Why Aurevion Tech -->
 <section id="why">
   <h2>Why Aurevion Tech?</h2>
   <ul>
@@ -151,14 +233,7 @@
   </ul>
 </section>
 
-<section id="products">
-  <h2>Our Product Range</h2>
-  <p>Engineering Services | Customized Control Panels</p>
-  <p>VFDs | PLCs | HMI | SCADA | Sensors</p>
-  <p>Robotics | Servo Drives & Encoders</p>
-  <p>Gearboxes | Geared Motors | Bearings | Couplings | LM Guides</p>
-</section>
-
+<!-- Contact -->
 <section id="contact">
   <h2>Contact Us</h2>
   <div class="contact">
